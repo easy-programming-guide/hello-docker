@@ -1,3 +1,9 @@
 {
-    "python.defaultInterpreterPath": "/Users/junwu/.local/share/virtualenvs/python-kfkNtIr4/bin/python"
+    "python.defaultInterpreterPath": "/Users/junwu/.local/share/virtualenvs/python-kfkNtIr4/bin/python",
+    "cSpell.words": [
+        "dotenv",
+        "fastapi",
+        "jsonable_encoder",
+        "uvicorn"
+    ]
 }

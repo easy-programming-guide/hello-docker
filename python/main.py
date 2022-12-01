@@ -8,11 +8,11 @@ import os
 from dotenv import load_dotenv
 load_dotenv(override=True)
 
-MONGODB_URI=os.getenv("MONGODB_URI")
+MONGODB_URI = os.getenv("MONGODB_URI")
 
 client = motor.motor_asyncio.AsyncIOMotorClient(MONGODB_URI)
 
-database = client.ugc
+database = client['ugc']
 
 review_collection = database.get_collection("productReview")
 
@@ -25,9 +25,9 @@ def review_helper(review) -> dict:
     }
 
 
-async def retrieve_reviews():
+async def retrieve_reviews(limit: int):
     reviews = []
-    async for student in review_collection.find():
+    async for student in review_collection.find().limit(limit):
         reviews.append(review_helper(student))
     return reviews
 
@@ -53,8 +53,8 @@ async def add(review: dict):
 
 
 @app.get("/reviews")
-async def list():
-    reviews = await retrieve_reviews()
+async def list(limit: int = 10):
+    reviews = await retrieve_reviews(limit)
     if reviews:
         return reviews
     return []
