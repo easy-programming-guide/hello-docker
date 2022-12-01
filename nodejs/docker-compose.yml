@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+
+  hello-docker-nodejs:
+    build: .
+    ports:
+      - "3001:3000"
+    container_name: hello-docker-nodejs
+    # volumes:
+    #   - ./:/app
+    environment:
+      - MONGODB_URI=mongodb://root:example@mongodb:27017/
+    networks:
+      - nodejs-web
+      - mongodb
+
+networks:
+  nodejs-web:
+   name: nodejs-web
+   driver: bridge
+  mongodb:
+    external: true

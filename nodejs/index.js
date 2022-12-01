@@ -1,10 +1,12 @@
 const express = require("express");
+require('dotenv').config();
+
 const app = express();
-const port = 3000;
+const port = 3000 ;
 app.use(express.json());
 
 const { MongoClient } = require("mongodb");
-const uri = "mongodb://root:example@localhost:27017/";
+const uri = process.env.MONGODB_URI || "mongodb://root:example@localhost:27017/";
 const client = new MongoClient(uri);
 
 app.get("/", async (req, res) => {

@@ -64,3 +64,10 @@ $ curl --location --request GET 'http://localhost:3000/reviews?limit=2' \
 
 ## For Python
 
+```shell
+$ pipenv shell 3.10.4
+$ pipenv install
+$ uvicorn main:app --reload
+```
+
+Open your browser at http://127.0.0.1:8000/docs

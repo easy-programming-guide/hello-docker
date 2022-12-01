@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+
+  hello-docker-python:
+    build: .
+    ports:
+      - "8001:8000"
+    container_name: hello-docker-python
+    # volumes:
+    #   - ./:/app
+    environment:
+      - MONGODB_URI=mongodb://root:example@mongodb:27017/
+    networks:
+      - python-web
+      - mongodb
+
+networks:
+  python-web:
+   name: python-web
+   driver: bridge
+  mongodb:
+    external: true

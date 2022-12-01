@@ -1,8 +1,9 @@
 version: "3.1"
 
 services:
-  mongo:
+  mongodb:
     image: mongo
+    container_name: mongodb
     restart: always
     ports:
       - 27017:27017
@@ -11,5 +12,11 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: example
     volumes:
       - mongodbData:/data/db
+    networks:
+      - mongodb
 volumes:
   mongodbData:
+networks:
+  mongodb:
+    name: mongodb
+    driver: bridge
