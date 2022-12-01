@@ -41,7 +41,7 @@ please step into sub-folder `nodejs`
 ```shell
 $ cd nodejs
 $ yarn
-$ yarn start
+$ yarn dev
 ```
 
 ### insert a new ProductReview
@@ -61,3 +61,6 @@ $ curl --location --request POST 'http://localhost:3000/review' \
 $ curl --location --request GET 'http://localhost:3000/reviews?limit=2' \
 --header 'Content-Type: application/json'
 ```
+
+## For Python
+
