@@ -4,7 +4,7 @@ this is a guide doc to help beginners start a tutorial for the following tech st
 
 - docker
 - MongoDb
-- NodeJS(nestjs)/Python(fastapi)
+- NodeJS(express)/Python(fastapi)
 
 ## pre-requirements
 
@@ -65,7 +65,7 @@ $ curl --location --request GET 'http://localhost:3000/reviews?limit=2' \
 ## For Python
 
 ```shell
-$ pipenv shell 3.10.4
+$ pipenv shell 3.10.6
 $ pipenv install
 $ uvicorn main:app --reload
 ```
