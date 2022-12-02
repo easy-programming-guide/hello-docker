@@ -61,7 +61,6 @@ $ curl --location --request POST 'http://localhost:3000/review' \
 $ curl --location --request GET 'http://localhost:3000/reviews?limit=2' \
 --header 'Content-Type: application/json'
 ```
-
 ## For Python
 
 ```shell
@@ -69,5 +68,7 @@ $ pipenv shell 3.10.6
 $ pipenv install
 $ uvicorn main:app --reload
 ```
-
 Open your browser at http://127.0.0.1:8000/docs
+### MongoDB orm
+more details about Motor -> https://www.mongodb.com/docs/drivers/motor/
+
