@@ -1,0 +1,9 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: fastapi-demo-service
+spec:
+  selector:
+    app: fastapi-echo
+  ports:
+    - port: 5678
