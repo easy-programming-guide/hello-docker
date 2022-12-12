@@ -7,3 +7,4 @@ spec:
     app: fastapi-demo
   ports:
     - port: 8000
+  type: LoadBalancer    
