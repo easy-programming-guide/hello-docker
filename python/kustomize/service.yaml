@@ -6,4 +6,4 @@ spec:
   selector:
     app: fastapi-echo
   ports:
-    - port: 5678
+    - port: 8000
