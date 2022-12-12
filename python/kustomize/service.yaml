@@ -4,6 +4,6 @@ metadata:
   name: fastapi-demo-service
 spec:
   selector:
-    app: fastapi-echo
+    app: fastapi-demo
   ports:
     - port: 8000
