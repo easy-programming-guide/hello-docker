@@ -1,0 +1,10 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: express-demo-service
+spec:
+  selector:
+    app: express-demo
+  ports:
+    - port: 3000
+#  type: LoadBalancer

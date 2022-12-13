@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: express-demo
+  namespace: flux-system
+spec:
+  interval: 30s
+  ref:
+    branch: main
+  url: https://github.com/easy-programming-guide/hello-docker
